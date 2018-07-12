@@ -9,7 +9,7 @@ function layout (view) {
   return (state, emit) => html`
     <body class="flex flex-column">
       <nav class="flex h3 bg-black white pv3 ph4">
-        <h1 class="ma0">component-explorer</h1>
+        <h1 class="ma0">@trainkit/component-explorer</h1>
       </nav>
 
       <main class="flex flex-row flex-auto">
