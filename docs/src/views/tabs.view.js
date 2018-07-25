@@ -1,5 +1,5 @@
 var html = require('choo/html')
-var Tabs = require('../components/Tabs')
+var { Tabs } = require('../components')
 
 var tabs = [
   { name: 'View A', view: state => html`<div>Content of view A</div>` },

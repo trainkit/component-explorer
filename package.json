@@ -1,12 +1,9 @@
 {
-  "name": "component-explorer",
-  "version": "0.2.0",
-  "description": "component explorer for trainkit",
-  "main": "src/index.js",
+  "name": "@trainkit/trainkit",
+  "version": "1.0.0",
+  "description": "components for choo",
+  "main": "index.js",
   "scripts": {
-    "start": "npm run watch",
-    "watch": "node scripts/watch",
-    "build": "bankai build",
     "test": "standard --fix"
   },
   "repository": {
@@ -14,11 +11,10 @@
     "url": "git+ssh://git@github.com/trainkit/component-explorer.git"
   },
   "keywords": [
-    "playbook",
-    "storybook",
     "component",
     "components",
     "ui",
+    "kit",
     "choo",
     "choojs"
   ],
