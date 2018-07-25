@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm run watch",
     "watch": "node scripts/watch",
-    "build": "bankai build docs/src/index.js",
+    "build": "bankai build docs",
     "test": "standard --fix"
   },
   "repository": {
