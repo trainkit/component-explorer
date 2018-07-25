@@ -3,11 +3,11 @@ var sheetify = require('sheetify')
 
 const PORT = 8080
 
-budo('src/index.js:bundle.js', {
+budo('docs/src/index.js:bundle.js', {
   live: true,
   pushstate: true,
   port: PORT,
-  dir: 'public',
+  dir: 'docs/public',
   browserify: {
     transform: sheetify
   }

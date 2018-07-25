@@ -1,3 +1,2 @@
-# component-explorer
+# Trainkit Documentation Website
 
-component explorer for trainkit

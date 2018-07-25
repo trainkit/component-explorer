@@ -6,20 +6,20 @@ module.exports = menu
 
 function menu (state, emit) {
   return html`
-    <aside class='bg-black ph4 pv3 w5'>
-      <nav>
-        <a href="/" class="link white">Home</a>
-        <ul class='list mt0 pl0'>
-          ${components.map(item)}
-        </ul>
-      </nav>
-    </aside>`
+    <nav>
+      <p class="title"><a href="/">Trainkit</a></p>
+      <h2 class="title is-5">Components</h2>
+      <ul class='list mt0 pl0'>
+        ${components.map(item)}
+      </ul>
+
+    </nav>`
 }
 
 function item (component) {
   return html`
     <li>
-      <a href='/${component.name.toLowerCase()}' class='link white'>
+      <a href="/${component.name.toLowerCase()}">
         ${component.name}
       </a>
     </li>`

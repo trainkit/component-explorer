@@ -22,9 +22,11 @@ module.exports = class Tabs extends Component {
     }
 
     return html`
-      <ul class="tabs list pl0">
-        ${this.items.map(this.tabEl)}
-      </ul>`
+      <div class="tabs">
+        <ul>
+          ${this.items.map(this.tabEl)}
+        </ul>
+      </div>`
   }
 
   update () {
@@ -42,10 +44,10 @@ module.exports = class Tabs extends Component {
     var selected = item === this.selected
 
     return html`
-      <li class="tab dib ${selected ? 'bt bw1' : ''}">
-        <button class="bw0 pointer" onclick=${e => this.select(item)}>
+      <li class=${selected ? 'is-active' : ''}>
+        <a onclick=${e => this.select(item)}>
           ${item.name}
-        </button>
+        </a>
       </li>`
   }
 }

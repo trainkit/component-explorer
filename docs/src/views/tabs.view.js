@@ -27,15 +27,24 @@ module.exports = tabsView
 function tabsView (state, emit) {
   return html`
     <article>
-      <h2>Tabs</h2>
+      <h2 class="title">Tabs</h2>
+    
+      <h3 class="title is-4">Usage</h3>
+
+      <pre>
+        <code>${usage}</code>
+      </pre>
       
-      <h3>Usage</h3>
 
-      <pre><code>${usage}</code></pre>
+      <hr>
 
-      <h3>Example</h3>
+      <h3 class="title is-4">Example</h3>
 
-      ${state.cache(Tabs, 'tabs').render(tabs)}
-      ${state.cache(Tabs, 'tabs').selected.view(state, emit)}
+      <div class="columns">
+        <div class="column is-6">
+          ${state.cache(Tabs, 'tabs').render(tabs)}
+          ${state.cache(Tabs, 'tabs').selected.view(state, emit)}
+        </div>
+      </div>
     </article>`
 }

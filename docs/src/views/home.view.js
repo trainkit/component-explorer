@@ -6,7 +6,7 @@ function home () {
   return html`
     <article>
       <p>
-        Trainkit is a set of crude web components that can be used with the Choo framework.
+        Trainkit is a set of components that can be used with the Choo framework.
       </p>
     </article>`
 }

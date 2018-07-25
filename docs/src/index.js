@@ -5,7 +5,6 @@ var css = require('sheetify')
 var app = choo()
 
 css('tachyons')
-css('./assets/style.css')
 
 app.use(router)
 

@@ -1,32 +1,34 @@
 var html = require('choo/html')
 var menu = require('./views/menu.view')
 
-const REPO = 'https://github.com/trainkit/component-explorer'
+const REPO_URL = 'https://github.com/trainkit/trainkit'
 
 module.exports = layout
 
 function layout (view) {
   return (state, emit) => html`
     <body class="flex flex-column">
-      <nav class="flex h3 bg-black white pv3 ph4">
-        <h1 class="ma0">@trainkit/component-explorer</h1>
-      </nav>
+      <main id="wrapper" class="flex-auto columns">
+        <aside class="section column is-2">
+          <div class="container">
+            ${menu(state, emit)}
+          </div>
+        </aside>
 
-      <main class="flex flex-row flex-auto">
-        ${menu(state, emit)}
+        <section class="section column flex flex-column min-vh-100 pb0">
+          <div class="container flex-auto">
+            ${view(state, emit)}
+          </div>
 
-        <div class="ph4 pv3">
-          ${view(state, emit)}
-        </div>
+          <footer class="footer bg-white">
+            <div class="content has-text-centered">
+              <p>
+                Made with ❤️ in Montréal. Check out the code on 
+                <a href=${REPO_URL}><strong>Github</strong></a>.
+              </p>
+            </div>
+          </footer>
+        </section>
       </main>
-
-      <footer class="flex items-center justify-center bg-black white h3">
-        <small>
-          Made with ❤️ in Montréal. Check out the code on 
-          <a class="link white" href=${REPO}>
-            <strong>Github</strong>
-          </a>.
-        </small>
-      </footer>
     </body>`
 }
