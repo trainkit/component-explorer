@@ -6,12 +6,15 @@
   "scripts": {
     "start": "npm run watch",
     "watch": "node scripts/watch",
-    "build": "bankai build docs",
+    "build": "mkdir -p docs/dist && cp docs/public/* docs/dist && browserify docs/src/index.js -o docs/dist/bundle.js",
     "test": "standard --fix"
   },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/trainkit/trainkit.git"
+  },
+  "browserify": {
+    "transform": [ "sheetify" ]
   },
   "keywords": [
     "component",
@@ -31,7 +34,6 @@
     "choo": "^6.12.1"
   },
   "devDependencies": {
-    "bankai": "^9.14.0",
     "budo": "^11.3.0",
     "choo-devtools": "^2.5.1",
     "cross-env": "^5.2.0",
