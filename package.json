@@ -14,7 +14,9 @@
     "url": "git+ssh://git@github.com/trainkit/trainkit.git"
   },
   "browserify": {
-    "transform": [ "sheetify" ]
+    "transform": [
+      "sheetify"
+    ]
   },
   "keywords": [
     "component",
@@ -31,7 +33,9 @@
     "url": "https://github.com/trainkit/trainkit/issues"
   },
   "dependencies": {
-    "choo": "^6.12.1"
+    "choo": "^6.12.1",
+    "twitter-component": "^1.0.2",
+    "youtube-component": "^1.1.2"
   },
   "devDependencies": {
     "budo": "^11.3.0",
